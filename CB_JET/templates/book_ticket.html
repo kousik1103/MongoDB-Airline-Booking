@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="CBJET Logo">
+        CBJET Airways
+    </header>
+    <h1>Book Ticket</h1>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <select name="seat_preference" required>
+            <option value="" disabled selected>Select Seat Preference</option>
+            <option value="Window">Window</option>
+            <option value="Aisle">Aisle</option>
+            <option value="Middle">Middle</option>
+        </select>
+        <select name="class" required>
+            <option value="" disabled selected>Select Class</option>
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>
+        </select>
+        <button type="submit">Book Now</button>
+    </form>
+    <a href="{{ url_for('flights') }}">Back to Flights</a>
+</body>
+</html>
