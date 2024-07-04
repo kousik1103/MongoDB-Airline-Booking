@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="CBJET Logo">
+        CBJET Airways
+    </header>
+    <h1>Your Ticket</h1>
+    <table>
+        <tr>
+            <th>Flight Number</th>
+            <td>{{ flight.flightNumber }}</td>
+        </tr>
+        <tr>
+            <th>Origin</th>
+            <td>{{ flight.origin }}</td>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <td>{{ flight.destination }}</td>
+        </tr>
+        <tr>
+            <th>Departure Time</th>
+            <td>{{ flight.departureTime }}</td>
+        </tr>
+        <tr>
+            <th>Arrival Time</th>
+            <td>{{ flight.arrivalTime }}</td>
+        </tr>
+        <tr>
+            <th>Seat Preference</th>
+            <td>{{ booking.seat_preference }}</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>{{ booking.class }}</td>
+        </tr>
+        <tr>
+            <th>Booking Date</th>
+            <td>{{ booking.booking_date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        </tr>
+    </table>
+    <a href="{{ url_for('booking_history') }}">Back to Booking History</a>
+</body>
+</html>
