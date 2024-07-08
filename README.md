@@ -1,0 +1,1 @@
+CB_JET is a simple airline booking system which allows the users to manage their accounts, view flights and book tickets. To enhance the user experience various features like filters and quicklinks are designed.It is done using Python and MongoDB primarily assisted by HTML and CSS for Frontend.
